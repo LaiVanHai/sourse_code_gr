@@ -6,12 +6,12 @@ import os
 # os.system("python namefile.py"); # tao danh sach file wav
 # os.system("python DataSplit.py -i all1.lst -o ./lst -p 5 -t 1"); # chia phan de train va test
 # sua khi phan theo tung lan dieu cu the, hoac chi la cheo <=> dan ca
-os.system("python createWorld.py"); # tao file config World.lst va World.weight
+os.system("python createWorld.py -i ./lst"); # tao file config World.lst va World.weight
 os.system("./TrainWorld.exe --config ./cfg/TrainWorldInit.cfg --inputStreamList ./lst/world.lst --weightStreamList ./lst/world.weight --outputWorldFilename world_init --debug false --verbose true"); # tao 2 file
 os.system("./TrainWorld.exe --config ./cfg/TrainWorldFinal.cfg --inputStreamList ./lst/world.lst --weightStreamList ./lst/world.weight --outputWorldFilename world --inputWorldFilename world_init --debug false --verbose true");
 # tao file world.gmm
-os.system("python createNDX.py");
-os.system("python createCfg.py"); # tao file config
+os.system("python createNDX.py -i ./lst -o ./ndx");
+os.system("python createCfg.py -i ./lst"); # tao file config
 os.system("python TrainTarget.py"); # train
 os.system("python createTest.py"); # tao file test
 os.system("python ComputeTest.py"); # test

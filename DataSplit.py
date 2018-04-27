@@ -1,3 +1,4 @@
+# phan chia theo lan dieu
 import os, sys, getopt, shutil
 
 def main(argv):
