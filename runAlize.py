@@ -5,6 +5,7 @@ import os
 # os.system("python NormFeat2.py"); # chuan hoa lan 2
 # os.system("python namefile.py"); # tao danh sach file wav
 # os.system("python DataSplit.py -i all1.lst -o ./lst -p 5 -t 1"); # chia phan de train va test
+# sua khi phan theo tung lan dieu cu the, hoac chi la cheo <=> dan ca
 os.system("python createWorld.py"); # tao file config World.lst va World.weight
 os.system("./TrainWorld.exe --config ./cfg/TrainWorldInit.cfg --inputStreamList ./lst/world.lst --weightStreamList ./lst/world.weight --outputWorldFilename world_init --debug false --verbose true"); # tao 2 file
 os.system("./TrainWorld.exe --config ./cfg/TrainWorldFinal.cfg --inputStreamList ./lst/world.lst --weightStreamList ./lst/world.weight --outputWorldFilename world --inputWorldFilename world_init --debug false --verbose true");
