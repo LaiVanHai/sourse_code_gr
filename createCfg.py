@@ -14,10 +14,20 @@ def main(argv):
     elif opt in ("-i"):
       lstDir = arg
 
-  OutputlstDir = "./cfg"
+  OutputlstDir = "./cfg/"
 
-  if (OutputlstDir[len(OutputlstDir) - 1] != "/"): OutputlstDir = OutputlstDir + "/"
-
+  if (lstDir == "./lst"):
+    link1 = "./cfg/target_DEMO.cfg"
+    link2 = "./cfg/target_DEMO.cfg.bak"
+  elif (lstDir == "./lst_ch"):
+    link1 = "./cfg/target_DEMO-CH.cfg"
+    link2 = "./cfg/target_DEMO-CH.cfg.bak"
+  elif (lstDir == "./lst_qh"):
+    link1 = "./cfg/target_DEMO-QH.cfg"
+    link2 = "./cfg/target_DEMO-QH.cfg.bak"
+  else:
+    link1 = "./cfg/target_DEMO-CH-QH.cfg"
+    link2 = "./cfg/target_DEMO-CH-QH.cfg.bak"
   for file in os.listdir(lstDir):
     fileName = file.split(".")[0]
     nameLength = len(fileName)
@@ -25,8 +35,8 @@ def main(argv):
     if (fileName[startName:nameLength] == "train"):
       outputFile1 = OutputlstDir + "target_" + fileName.split("t")[0] + ".cfg"
       outputFile2 = OutputlstDir + "target_" + fileName.split("t")[0] + ".cfg.bak"
-      shutil.copyfile("./cfg/target_DEMO.cfg", outputFile1)
-      shutil.copyfile("./cfg/target_DEMO.cfg.bak", outputFile2)
+      shutil.copyfile(link1, outputFile1)
+      shutil.copyfile(link2, outputFile2)
 
   print("Create all file config and save to ", OutputlstDir)
 
