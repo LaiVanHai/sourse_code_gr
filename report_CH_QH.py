@@ -43,6 +43,7 @@ def main(argv):
       curName = fileName
       count = 0
       curArr = []
+      curVal = []
 
     curInput = open(resDir + "/" + file, "r")
     count += 1
@@ -52,12 +53,31 @@ def main(argv):
     while(line != ""):
       countArr += 1
       val = line.split(" ")
-      if(len(curArr) <= countArr): curArr.append(int(val[2]))
+      if(len(curArr) <= countArr):
+        curVal.append(float(val[4].rstrip()))
+        curArr.append(0)
       else:
-        if (int(val[2]) == 1): curArr[countArr] += 1
-
+        curVal.append(float(val[4].rstrip()))
       line = curInput.readline()
+
+    sub_count = -1
+    element_max = 0
+    max_val = 0
+    for cur in curVal: # tim ra phan tu co gia tri lon nhat
+      sub_count += 1
+      if (cur > max_val):
+        max_val = cur
+        element_max = sub_count
+    curVal = []
+    curArr[element_max] += 1 # tang gia tri len mot don vi
+
     curInput.close()
+
+  saveFile.write(curName.upper() + "\t")
+  for curVal in curArr:
+    value = curVal / float(count)
+    saveFile.write("%0.2f \t" %value)
+  saveFile.write("\n")
 
   saveFile.close()
 

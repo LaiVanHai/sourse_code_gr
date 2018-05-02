@@ -1,4 +1,5 @@
 import os
+print("Running feature_calculate.py.\n")
 os.system("python feature_calculate.py"); # trich chon dac trung
 os.system("python NormFeat1.py"); # chuan hoa lan 1
 os.system("python EnergyDetector1.py"); # danh dau nhung doan co tieng noi
@@ -18,7 +19,7 @@ os.system("python createCfg.py -i ./lst"); # tao file config
 os.system("python TrainTarget.py"); # train
 os.system("python createTest.py"); # tao file test
 os.system("python ComputeTest.py"); # test
-os.system("python report.py"); # tao file bao cao
+os.system("python report_n.py"); # tao file bao cao
 
 #=================
 # phan theo lan dieu
@@ -46,4 +47,4 @@ os.system("python ComputeTest2.py"); # test
 # ComputeTest test theo loai
 # ComputeTest2 test theo lan dieu
 
-os.system("python report2.py"); # tao file bao cao
+os.system("python report2_n.py"); # tao file bao cao

@@ -24,7 +24,9 @@ while(line != ""):
 
     curList = []
     curName = ""
+    outputFile.close()
 
+outputFile = open(OutputlstDir + curName + "train.lst", "w+")
 i0 = 0
 listLength = len(curList)
 while(i0 < listLength):
