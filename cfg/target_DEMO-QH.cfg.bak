@@ -12,7 +12,7 @@ saveMixtureFileExtension		.gmm
 loadFeatureFileExtension		.norm.prm
 featureFilesPath			./prm/
 labelFilesPath				./lbl/
-mixtureFilesPath			./gmm_ch_qh/
+mixtureFilesPath			./gmm_qh/
 nbTrainIt 					1
 labelSelectedFrames      		speech
 normalizeModel 				true

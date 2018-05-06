@@ -58,6 +58,12 @@ for file in os.listdir("./res"):
 
   curInput.close()
 
+saveFile.write(curName.upper() + "\t")
+for curVal in curArr:
+  value = curVal / float(count)
+  saveFile.write("%0.2f \t" %value)
+saveFile.write("\n")
+
 saveFile.close()
 
 print("Write report successfully and save to ", OutputlstDir)

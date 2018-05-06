@@ -23,4 +23,4 @@ meanAdapt				true
 MAPRegFactorMean				14
 frameLength				0.01
 featureServerMemAlloc		100000000
-featureServerMask	0-12
+featureServerMask	0-59
