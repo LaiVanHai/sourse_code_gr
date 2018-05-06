@@ -69,7 +69,7 @@ def main(argv):
         max_val = cur
         element_max = sub_count
     curVal = []
-    curArr[element_max] += 1 # tang gia tri len mot don vi
+    if (max_val > 0) : curArr[element_max] += 1 # tang gia tri len mot don vi
 
     curInput.close()
 
