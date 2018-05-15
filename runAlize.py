@@ -20,7 +20,7 @@ os.system("python createCfg.py -i ./lst"); # tao file config
 os.system("python TrainTarget.py"); # train
 os.system("python createTest.py"); # tao file test
 os.system("python ComputeTest.py"); # test
-os.system("python report.py"); # tao file bao cao
+os.system("python report.py -i ./res -o ./rpt"); # tao file bao cao
 
 #=================
 # phan theo lan dieu
@@ -40,7 +40,7 @@ os.system("python createCfg.py -i ./lst_qh"); # tao file config
 os.system("python TrainTargetCH.py"); # train
 os.system("python TrainTargetQH.py"); # train
 
-os.system("python createTest3.py"); # tao file test
+os.system("python createTest3.py -c ./test_ch -q ./test_qh -r ./res -p ./rpt"); # tao file test
 # createTest tao file test phan theo loai
 # createTest2 tao file test phan theo lan dieu
 # createTest3 tao file test phan theo lan dieu dua vao ket qua phan theo loai
@@ -49,11 +49,15 @@ os.system("python ComputeTest2.py"); # test
 # ComputeTest test theo loai
 # ComputeTest2 test theo lan dieu
 
-os.system("python report2.py"); # tao file bao cao
+os.system("python report2.py -c ./res_ch -q ./res_qh -o ./rpt"); # tao file bao cao
 
 os.system("python exportData1.py -i ./rpt -f report.txt")
 os.system("python exportData2.py -i ./rpt -f report_ch.txt")
 os.system("python exportData2.py -i ./rpt -f report_qh.txt")
 
 # Merger data
-# python mergeData.py -i ./rpt
+# python mergeData.py -i ./mergeData # merge du lieu phan theo lan dieu
+# python mergeData2.py -i ./mergeData # merge du lieu phan theo the loai
+
+# python convert2Number.py -n 20 -f ./mergeData/mergeData.txt
+

@@ -49,4 +49,4 @@ for file in os.listdir("./lst"):
       outputFile.write(curList[i0])
       i0 += 1
     outputFile.close()
-  print("Create all file .LST successfully")
+print("Create all file .LST successfully")

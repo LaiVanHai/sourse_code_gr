@@ -36,7 +36,7 @@ def main(argv):
   line = inputFile.readline()
   count = 1
 
-  while(count <= lineLen):
+  while(line != ""):
     curLine = line.split("\t")
     sumFile = 0 # luu tong so file dua vao test
 
