@@ -15,13 +15,13 @@ for file in os.listdir(lstDir):
   if (file.split("-")[0] != lineRpt.split("\t")[0]): lineRpt = rptFile.readline()
   result = 0
   if (lineRpt.split("_")[0] == "CH"):
-    if (float(lineRpt.split("\t")[1]) > 0.5):
+    if (float(lineRpt.split("\t")[1]) >= 0.5):
       OutputFolder = OutputlstDir1
       ndxFolder = "./ndx_ch"
       result = 1
     else: result = 0
   elif (lineRpt.split("_")[0] == "QH"):
-    if (float(lineRpt.split("\t")[2]) > 0.5):
+    if (float(lineRpt.split("\t")[2]) >= 0.5):
       OutputFolder = OutputlstDir2
       ndxFolder = "./ndx_qh"
       result = 1
