@@ -1,13 +1,14 @@
 import os
-print("Running feature_calculate.py.\n")
-os.system("python feature_calculate.py"); # trich chon dac trung
-os.system("python NormFeat1.py"); # chuan hoa lan 1
-os.system("python EnergyDetector1.py"); # danh dau nhung doan co tieng noi
-os.system("python NormFeat2.py"); # chuan hoa lan 2
-os.system("python namefile.py"); # tao danh sach file wav
-#---------------------------------
+# print("Running feature_calculate.py.\n")
+# os.system("python feature_calculate.py"); # trich chon dac trung
+# os.system("python NormFeat1.py"); # chuan hoa lan 1
+# os.system("python EnergyDetector1.py"); # danh dau nhung doan co tieng noi
+# os.system("python NormFeat2.py"); # chuan hoa lan 2
+# os.system("python namefile.py"); # tao danh sach file wav
+# #---------------------------------
 # phan theo loai
-os.system("python DataSplit1.py -i all1.lst -o ./lst -p 5 -t 1"); # chia phan de train va test
+os.system("python remove_and_create.py");
+os.system("python DataSplit1.py -i all1.lst -o ./lst -p 5 -t 5"); # chia phan de train va test
 # DataSplit1.py: phan theo loai /
 # DataSplit.py: phan theo lan dieu /
 os.system("python createWorld.py -i ./lst"); # tao file config World.lst va World.weight
@@ -19,7 +20,7 @@ os.system("python createCfg.py -i ./lst"); # tao file config
 os.system("python TrainTarget.py"); # train
 os.system("python createTest.py"); # tao file test
 os.system("python ComputeTest.py"); # test
-os.system("python report_n.py"); # tao file bao cao
+os.system("python report.py"); # tao file bao cao
 
 #=================
 # phan theo lan dieu
@@ -39,12 +40,20 @@ os.system("python createCfg.py -i ./lst_qh"); # tao file config
 os.system("python TrainTargetCH.py"); # train
 os.system("python TrainTargetQH.py"); # train
 
-os.system("python createTest2.py"); # tao file test
+os.system("python createTest3.py"); # tao file test
 # createTest tao file test phan theo loai
 # createTest2 tao file test phan theo lan dieu
+# createTest3 tao file test phan theo lan dieu dua vao ket qua phan theo loai
 
 os.system("python ComputeTest2.py"); # test
 # ComputeTest test theo loai
 # ComputeTest2 test theo lan dieu
 
-os.system("python report2_n.py"); # tao file bao cao
+os.system("python report2.py"); # tao file bao cao
+
+os.system("python exportData1.py -i ./rpt -f report.txt")
+os.system("python exportData2.py -i ./rpt -f report_ch.txt")
+os.system("python exportData2.py -i ./rpt -f report_qh.txt")
+
+# Merger data
+# python mergeData.py -i ./rpt
