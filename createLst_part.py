@@ -4,11 +4,11 @@ def main(argv):
   try:
     opts, args = getopt.getopt(argv,"ho:")
   except getopt.GetoptError:
-    print 'createLst_ch_qh.py -o <outputfolder>'
+    print 'createLst_part.py -o <outputfolder>'
     sys.exit(2)
   for opt, arg in opts:
     if opt == '-h':
-      print 'createLst_ch_qh.py -o <outputfolder>'
+      print 'createLst_part.py -o <outputfolder>'
       sys.exit()
     elif opt in ("-o"):
       OutputlstDir = arg
@@ -23,8 +23,8 @@ def main(argv):
   curName = ""
 
   while(line != ""):
-    if (curName == ""): curName = line.split("-")[0]
-    if (curName == line.split("-")[0]):
+    if (curName == ""): curName = line.split("_")[0]
+    if (curName == line.split("_")[0]):
       curList.append(line)
       line = inputFile.readline()
     else:
