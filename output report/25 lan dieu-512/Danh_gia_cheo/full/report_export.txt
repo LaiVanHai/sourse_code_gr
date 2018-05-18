@@ -1,0 +1,16 @@
+So luong lan dieu cheo: 25
+=======================================
+==> Ty le nhan dung: 0.97 
+So lan dieu nhan DUNG HOAN TOAN: 20
+So lan dieu nhan DUNG MOT PHAN: 5
+CH_LL	CH_LNC	CH_SLC	CH_TV	CH_XX	
+So lan dieu nhan SAI: 0
+
+So luong lan dieu dan ca: 25
+=======================================
+==> Ty le nhan dung: 0.95 
+So lan dieu nhan DUNG HOAN TOAN: 13
+So lan dieu nhan DUNG MOT PHAN: 12
+QH_BDMT	QH_CTVTVT	QH_CTX	QH_DCSC	QH_DQNB	QH_GTGM	QH_LGD	QH_LVDC	QH_MN	QH_NODHLV	QH_SCLK	QH_TRBMSTC	
+So lan dieu nhan SAI: 0
+

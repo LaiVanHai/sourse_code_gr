@@ -1,0 +1,8 @@
+So luong lan dieu: 10
+=======================================
+==> Ty le nhan dung: 0.80 
+So lan dieu nhan DUNG HOAN TOAN: 8
+So lan dieu nhan DUNG MOT PHAN: 0
+
+So lan dieu nhan SAI: 2
+QH_CTVTVT	QH_NMKN	

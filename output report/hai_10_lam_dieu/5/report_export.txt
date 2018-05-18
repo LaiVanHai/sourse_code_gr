@@ -1,0 +1,16 @@
+So luong lan dieu cheo: 10
+=======================================
+==> Ty le nhan dung: 1.00 
+So lan dieu nhan DUNG HOAN TOAN: 10
+So lan dieu nhan DUNG MOT PHAN: 0
+
+So lan dieu nhan SAI: 0
+
+So luong lan dieu dan ca: 10
+=======================================
+==> Ty le nhan dung: 0.90 
+So lan dieu nhan DUNG HOAN TOAN: 9
+So lan dieu nhan DUNG MOT PHAN: 0
+
+So lan dieu nhan SAI: 1
+QH_SCLK	
