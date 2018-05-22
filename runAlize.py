@@ -7,8 +7,8 @@ import os
 # os.system("python namefile.py"); # tao danh sach file wav
 #---------------------------------
 # phan theo loai
-os.system("python remove_and_create.py");
-os.system("python DataSplit1.py -i all1.lst -o ./lst -p 5 -t 2"); # chia phan de train va test
+# os.system("python remove_and_create.py");
+# os.system("python DataSplit1.py -i all1.lst -o ./lst -p 5 -t 0"); # chia phan de train va test
 # DataSplit1.py: phan theo loai /
 # DataSplit.py: phan theo lan dieu /
 os.system("python createWorld.py -i ./lst"); # tao file config World.lst va World.weight

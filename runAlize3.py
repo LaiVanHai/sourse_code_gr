@@ -6,8 +6,8 @@ import os
 # os.system("python EnergyDetector1.py"); # danh dau nhung doan co tieng noi
 # os.system("python NormFeat2.py"); # chuan hoa lan 2
 # os.system("python namefile.py"); # tao danh sach file wav
-# #---------------------------------
-# # huan luyen phan theo loai
+#---------------------------------
+# huan luyen phan theo loai
 # os.system("python remove_and_create.py");
 # os.system("python createLst_part.py -o ./lst"); # tao ra file train cho thu muc lst
 # os.system("python createWorld.py -i ./lst"); # tao file config World.lst va World.weight
@@ -39,35 +39,41 @@ import os
 #---------------------------------
 # cat ngan file de tao du lieu test
 
-# os.system("python cutWav.py -t F -f ./wav/wavF") # cat file wav theo thoi gian
+# os.system("python cutWav.py -t 12 -f ./wav/wav12") # cat file wav theo thoi gian
 # print("Cut file Wav successfully! ")
 
-os.system("python feature_calculate_CH_QH.py -i ./wav/wavF -o ./prm/prmF"); # trich chon dac trung
-print("Run file feature_calculate_CH_QH successfully! ")
+# os.system("python feature_calculate_CH_QH.py -i ./wav/wav12 -o ./prm/prm12"); # trich chon dac trung
+# print("Run file feature_calculate_CH_QH successfully! ")
 
-os.system("python NormFeat1_CH_QH.py -i ./prm/prmF"); # chuan hoa lan 1
-# sua file NormFeat_ch_qh
-print("Run file NormFeat1_CH_QH successfully! ")
+# os.system("python NormFeat1_CH_QH.py -i ./prm/prm12"); # chuan hoa lan 1
+# # sua file NormFeat_ch_qh
+# print("Run file NormFeat1_CH_QH successfully! ")
 
-os.system("python EnergyDetector_CH_QH.py -i ./prm/prmF"); # danh dau nhung doan co tieng noi
-# sua file EnergyDetector_ch_qh
-print("Run file EnergyDetector_CH_QH successfully! ")
+# os.system("python EnergyDetector_CH_QH.py -i ./prm/prm12"); # danh dau nhung doan co tieng noi
+# # sua file EnergyDetector_ch_qh
+# print("Run file EnergyDetector_CH_QH successfully! ")
 
-os.system("python NormFeat2_CH_QH.py -i ./prm/prmF"); # chuan hoa lan 2
-# sua file NormFeat_energy_ch_qh
-print("Run file NormFeat2_CH_QH successfully! ")
+# os.system("python NormFeat2_CH_QH.py -i ./prm/prm12"); # chuan hoa lan 2
+# # sua file NormFeat_energy_ch_qh
+# print("Run file NormFeat2_CH_QH successfully! ")
 
-#---------------------------------
+# #---------------------------------
 # phan theo the loai
-
-os.system("python createTestCH_QH.py -i ./lbl/lblF -o ./test/testF -n ./ndx"); # tao file test
-os.system("python ComputeTest_part.py -i ./test/testF -o ./res/resF"); # test
+os.system("python getTime.py -c StartTest -o ./rpt/rpt12") # danh thoi gian bat dau
+os.system("python createTestCH_QH.py -i ./lbl/lbl12 -o ./test/test12 -n ./ndx"); # tao file test
+os.system("python ComputeTest_part.py -i ./test/test12 -o ./res/res12"); # test
 # sua file targetTest_part
-os.system("python report.py -i ./res/resF -o ./rpt/rptF"); # tao file bao cao
+os.system("python report.py -i ./res/res12 -o ./rpt/rpt12"); # tao file bao cao
 
 # ---------------------------------
 # phan theo lan dieu
-os.system("python createTest3.py -c ./test_ch/test_chF -q ./test_qh/test_qhF -r ./res/resF -p ./rpt/rptF"); # tao file test
-os.system("python ComputeTest2_part.py -c ./test_ch/test_chF -q ./test_qh/test_qhF -a ./res_ch/res_chF -b res_qh/res_qhF"); # test
+os.system("python createTest3.py -c ./test_ch/test_ch12 -q ./test_qh/test_qh12 -r ./res/res12 -p ./rpt/rpt12"); # tao file test
+os.system("python ComputeTest2_part.py -c ./test_ch/test_ch12 -q ./test_qh/test_qh12 -a ./res_ch/res_ch12 -b res_qh/res_qh12"); # test
 # sua file targetTest_ch_part va targetTest_qh_part
-os.system("python report2.py -c ./res_ch/res_chF -q ./res_qh/res_qhF -o ./rpt/rptF"); # tao file bao cao
+os.system("python report2.py -c ./res_ch/res_ch12 -q ./res_qh/res_qh12 -o ./rpt/rpt12"); # tao file bao cao
+
+os.system("python exportData1.py -i ./rpt/rpt12 -f report.txt")
+os.system("python exportData2.py -i ./rpt/rpt12 -f report_ch.txt")
+os.system("python exportData2.py -i ./rpt/rpt12 -f report_qh.txt")
+
+os.system("python getTime.py -c EndTest -o ./rpt/rpt12") # danh thoi gian ket thuc
