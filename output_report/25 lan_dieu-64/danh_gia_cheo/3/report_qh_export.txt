@@ -1,0 +1,8 @@
+So luong lan dieu: 24
+=======================================
+==> Ty le nhan dung: 0.66 
+So lan dieu nhan DUNG HOAN TOAN: 9
+So lan dieu nhan DUNG MOT PHAN: 12
+QH_DCSC	QH_DQNB	QH_GDCC	QH_GTGM	QH_LGD	QH_NGMD	QH_NMKN	QH_NODHLV	QH_SCLK	QH_SMAD	QH_TPTN	QH_TRBMSTC	
+So lan dieu nhan SAI: 3
+QH_CD	QH_CTX	QH_DBBMCG	
