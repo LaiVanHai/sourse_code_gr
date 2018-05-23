@@ -1,0 +1,8 @@
+So luong lan dieu: 24
+=======================================
+==> Ty le nhan dung: 0.91 
+So lan dieu nhan DUNG HOAN TOAN: 8
+So lan dieu nhan DUNG MOT PHAN: 16
+CH_CG	CH_CNGM	CH_CP	CH_DPPC	CH_DTBT	CH_DTTD	CH_DTTK	CH_DTTN	CH_DX	CH_DXN	CH_LL	CH_LNC	CH_QM	CH_QTVD	CH_SLC	CH_SQC	
+So lan dieu nhan SAI: 0
+

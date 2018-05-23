@@ -1,0 +1,4 @@
+StartTrain_Loai:2018-05-22 12:33:43
+StartTrain_LanDieu:2018-05-22 12:44:21
+StartTest_LanDieu:2018-05-22 12:46:07
+EndTest:2018-05-22 12:47:10
