@@ -1,6 +1,5 @@
 * NormFeat config File
 * For Enegy (step 3), output: *.ern.prm
-* 2015-02-05: sua vectSize = 60 thanh vectSize = 61
 
 mode 					norm
 bigEndian               			false
