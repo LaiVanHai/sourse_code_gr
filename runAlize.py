@@ -1,14 +1,14 @@
 import os
-# print("Running feature_calculate.py.\n")
-# os.system("python feature_calculate.py"); # trich chon dac trung
-# os.system("python NormFeat1.py"); # chuan hoa lan 1
-# os.system("python EnergyDetector1.py"); # danh dau nhung doan co tieng noi
-# os.system("python NormFeat2.py"); # chuan hoa lan 2
-# os.system("python namefile.py"); # tao danh sach file wav
-#---------------------------------
+print("Running feature_calculate.py.\n")
+os.system("python feature_calculate.py"); # trich chon dac trung
+os.system("python NormFeat1.py"); # chuan hoa lan 1
+os.system("python EnergyDetector1.py"); # danh dau nhung doan co tieng noi
+os.system("python NormFeat2.py"); # chuan hoa lan 2
+os.system("python namefile.py"); # tao danh sach file wav
+# ---------------------------------
 # phan theo loai
-# os.system("python remove_and_create.py");
-# os.system("python DataSplit1.py -i all1.lst -o ./lst -p 5 -t 0"); # chia phan de train va test
+os.system("python remove_and_create.py");
+os.system("python DataSplit1.py -i all1.lst -o ./lst -p 5 -t 0"); # chia phan de train va test
 # DataSplit1.py: phan theo loai /
 # DataSplit.py: phan theo lan dieu /
 os.system("python createWorld.py -i ./lst"); # tao file config World.lst va World.weight
